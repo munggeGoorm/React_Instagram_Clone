@@ -12,9 +12,10 @@ export default function index() {
                 <a href="/" className="text-2xl text-start font-bold block">Add Post</a>
                 <a href="/" className="text-2xl text-start font-bold block">Profile</a>
             </div>
-
+            <div className="w-[250px] 2xl:w-[300px]  h-screen">
+            </div>
             {/*posts*/}
-            <div className=" h-full w-2/5  flex-col  bg-amber-50">
+            <div className=" h-full w-2/5 flex-col  bg-amber-50">
                 <PostItem/>
                 <PostItem/>
                 <PostItem/>
@@ -25,6 +26,7 @@ export default function index() {
                 <div>
                     로그인됨
                 </div>
+                {/*todo 로그아웃 기능*/}
                 {/*<button onClick={() => setIsAuthenticated(false)}>로그아웃</button>*/}
             </div>
         </div>
