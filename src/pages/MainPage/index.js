@@ -1,18 +1,19 @@
-import logo from '../../logo.svg';
+import { useNavigate } from 'react-router-dom';
 import PostItem from '../../components/PostItem/index';
-import React, {useEffect, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import '../../App.css';
-import axios from "axios";
 import UnLoginedPage from '../AccountPage/index';
 
 export default function Index() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    let currentStatus =
+        (localStorage.getItem('isAuthenticated') === null) ? false : localStorage.getItem('isAuthenticated');
+    const [isAuthenticated, setIsAuthenticated] = useState(currentStatus);
 
-    // useEffect(()=>{
-    //     axios.get('/api/v1/authentication')
-    //         .then(response => setIsAuthenticated(response))
-    //         .catch(error => console.log(error));
-    // }, []);
+    const logout = () => {
+        localStorage.setItem('isAuthenticated', false);
+        setIsAuthenticated(false);
+    }
+    console.log(isAuthenticated);
 
     return (
         <div className="h-full w-full">
@@ -39,10 +40,7 @@ export default function Index() {
 
                         {/*login*/}
                         <div className="fixed top-0 right-0">
-                            <div>
-                                로그인됨
-                            </div>
-                            <button onClick={() => setIsAuthenticated(false)}>로그아웃</button>
+                            <button onClick={logout}>로그아웃</button>
                         </div>
                     </div>
             }
