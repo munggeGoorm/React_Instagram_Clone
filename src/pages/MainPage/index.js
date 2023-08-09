@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import PostItem from '../../components/PostItem/index';
+import React, {useEffect, useState} from 'react'
+import PostsPage from '../PostsPage/index';
 import React, {useCallback, useEffect, useState} from 'react'
 import '../../App.css';
 import UnLoginedPage from '../AccountPage/index';

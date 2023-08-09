@@ -75,6 +75,7 @@ export const PostItem = () => {
             user.savedPost.push(post.id);
         setIsSaved(user.savedPost.includes(post.id));
     }
+
     const [formData, setFormData] = useState({
         nickname: user.nickname,
         content: '',
@@ -95,7 +96,11 @@ export const PostItem = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // 댓글 배열에 새 댓글 추가
-        post.comments.push(formData);
+        post.comments.push({
+            nickname: formData.nickname,
+            content: formData.comment,
+            date: formData.date,
+        });
 
         // Form 데이터 초기화
         setFormData((prevState) => ({

@@ -16,6 +16,7 @@
     "styled-components": "^6.0.6",
     "web-vitals": "^2.1.4"
   },
+  "proxy": "http://localhost:8080/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "http-proxy-middleware": "^2.0.6",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3"
   }
