@@ -36,7 +36,6 @@ export default function EmailSignup() {
             })
         )
         response.then((result)=>{
-            console.log(result.data)
             if(result.data){
                 navigate(`/accounts/login`);
             } else {
