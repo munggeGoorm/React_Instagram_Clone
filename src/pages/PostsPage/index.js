@@ -1,7 +1,8 @@
 import PostItem from "../../components/PostItem";
 import React from 'react'
+import Logout from '../../components/Logout.js';
 
-export default function index() {
+export default function index({setIsAuthenticated}) {
     return (
         <div className="w-full h-full m-auto  flex justify-center ">
             {/*navigation*/}
@@ -22,13 +23,7 @@ export default function index() {
             </div>
 
             {/*login*/}
-            <div className="fixed top-0 right-0">
-                <div>
-                    로그인됨
-                </div>
-                {/*todo 로그아웃 기능*/}
-                {/*<button onClick={() => setIsAuthenticated(false)}>로그아웃</button>*/}
-            </div>
+            <Logout setIsAuthenticated={setIsAuthenticated}/>
         </div>
     )
 }

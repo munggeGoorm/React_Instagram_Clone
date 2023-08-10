@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import MainPage from "./pages/MainPage/index.js";
 import DirectInboxPage from "./pages/DirectInboxPage/index.js";
