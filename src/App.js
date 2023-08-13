@@ -6,6 +6,7 @@ import ProfilePage from "./pages/ProfilePage/Profile.js";
 import EditProfile from './pages/ProfilePage/EditProfile.js';
 import EmailSignupPage from './pages/AccountPage/EmailSignup.js';
 import LoginPage from './pages/AccountPage/Login.js';
+import EditProfile from './pages/ProfilePage/EditProfile.js';
 
 export default function App() {
   return (
